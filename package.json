@@ -5,11 +5,13 @@
   "main": "chatbot.js",
   "scripts": {
     "start": "node chatbot.js",
+    "render-build": "npm install && npx puppeteer browsers install chrome",
     "dev": "nodemon chatbot.js"
   },
   "dependencies": {
     "firebase-admin": "^12.7.0",
     "moment-timezone": "^0.5.46",
+    "puppeteer": "^24.9.0",
     "qrcode-terminal": "^0.12.0",
     "whatsapp-web.js": "^1.34.6"
   },

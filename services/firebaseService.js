@@ -1,6 +1,16 @@
 const admin = require("firebase-admin");
 const logger = require("../utils/logger");
-const serviceAccount = require("../firebase-key.json");
+
+if (!process.env.FIREBASE_SERVICE_ACCOUNT_JSON) {
+  throw new Error("FIREBASE_SERVICE_ACCOUNT_JSON não configurada");
+}
+
+let serviceAccount;
+try {
+  serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON);
+} catch (err) {
+  throw new Error("FIREBASE_SERVICE_ACCOUNT_JSON inválida");
+}
 
 if (!admin.apps.length) {
   admin.initializeApp({
@@ -11,9 +21,13 @@ if (!admin.apps.length) {
 const db = admin.firestore();
 const FieldValue = admin.firestore.FieldValue;
 
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
 function agoraISO() {
   return new Date().toISOString();
 }
+
+// ─── Usuarios ─────────────────────────────────────────────────────────────────
 
 async function salvarUsuario(usuarioId, dados = {}) {
   try {
@@ -64,6 +78,8 @@ async function buscarUsuario(usuarioId) {
   }
 }
 
+// ─── Estado de conversa ───────────────────────────────────────────────────────
+
 async function salvarEstadoConversa(usuarioId, estado, extras = {}) {
   try {
     await db
@@ -102,6 +118,8 @@ async function limparEstadoConversa(usuarioId) {
   }
 }
 
+// ─── Atendimentos ─────────────────────────────────────────────────────────────
+
 async function buscarAtendimentoAbertoPorUsuario(usuarioId) {
   try {
     const doc = await db.collection("atendimentos_abertos").doc(usuarioId).get();
@@ -139,10 +157,8 @@ async function criarOuObterAtendimentoAberto(usuarioId, dados = {}) {
         usuario_id: usuarioId,
         aberto: true,
         status: "bot",
-
         assignedTo: null,
         assignedToNome: null,
-
         aviso_inatividade_enviado: false,
         lembrete_menu_enviado: false,
         nps_enviado: false,
@@ -197,6 +213,8 @@ async function incrementarTotalMensagensAtendimento(atendimentoId) {
   }
 }
 
+// ─── Mensagens ────────────────────────────────────────────────────────────────
+
 async function adicionarMensagem(atendimentoId, dados = {}) {
   try {
     await db.collection("mensagens").add({
@@ -208,6 +226,8 @@ async function adicionarMensagem(atendimentoId, dados = {}) {
     logger.error("Erro ao adicionar mensagem: " + err.message);
   }
 }
+
+// ─── Monitores ────────────────────────────────────────────────────────────────
 
 async function listarAtendimentosInativos() {
   try {
@@ -264,6 +284,8 @@ async function marcarMensagemPendenteErro(id, erro) {
     logger.error("Erro ao marcar mensagem pendente como erro: " + err.message);
   }
 }
+
+// ─── Eventos / Logs ───────────────────────────────────────────────────────────
 
 async function salvarEvento(tipo, detalhe) {
   try {

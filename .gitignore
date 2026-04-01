@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Environment
+.env
+.env.local
+
+# Firebase / service accounts (nunca commitar chaves)
+firebase-key.json
+*-firebase-adminsdk*.json
+serviceAccount*.json
+
+# WhatsApp Web session (contém cookies/tokens de sessão)
+.wwebjs_auth/
+.wwebjs_cache/
+.webjs_auth/
+.webjs_cache/
+
+# Firebase local
+.firebase/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+
+# PM2
+ecosystem.config.js.bak

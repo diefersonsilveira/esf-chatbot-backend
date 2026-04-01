@@ -1,0 +1,12 @@
+{
+  "horario": "O horário de atendimento da unidade é de *segunda a sexta, das 07:00 às 17:00*.\n\nEm feriados o funcionamento pode ser diferente — consulte antes de se deslocar.",
+  "agendamento": "Para agendamento, compareça à unidade com seus *documentos pessoais* (RG ou CPF) e *cartão do SUS*.\n\nEm alguns casos o agendamento depende de avaliação prévia da equipe.",
+  "receita": "Para renovação de receita, traga:\n• Cartão do SUS\n• Documento com foto\n• Receita anterior (se tiver)\n\nCompareça à unidade no horário de atendimento.",
+  "vacina": "A vacinação segue o calendário e a disponibilidade da unidade. Traga:\n• Documento com foto\n• Cartão do SUS\n• Carteira de vacinação",
+  "pressao": "Se você está com pressão alta, dor de cabeça, tontura ou mal-estar, procure orientação da equipe de saúde.\n\nEm caso de sintomas intensos, busque atendimento *imediatamente*.",
+  "exames": "Para informações sobre exames, compareça à unidade com *documento* e *cartão do SUS*.\n\nAlguns exames exigem solicitação médica prévia.",
+  "documentos": "Geralmente são necessários:\n• Documento com foto (RG ou CNH)\n• CPF\n• Cartão do SUS\n\nDependendo do atendimento, outros documentos podem ser solicitados.",
+  "acs": "Para falar com um ACS, precisarei confirmar alguns dados.",
+  "feriado": "Em feriados, o funcionamento pode ser alterado. Procure confirmar com a unidade antes de se deslocar.",
+  "default": "Não consegui identificar sua dúvida. Digite *MENU* para ver as opções disponíveis."
+}

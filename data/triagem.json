@@ -1,0 +1,14 @@
+{
+  "urgente": [
+    "dor no peito", "falta de ar", "desmaio", "convulsao", "convulsão",
+    "paralisia", "dificuldade para falar", "sangramento intenso", "inconsciente"
+  ],
+  "moderado": [
+    "pressao alta", "pressão alta", "tontura", "visao turva", "visão turva",
+    "dor de cabeca forte", "dor de cabeça forte", "vomito", "vômito", "febre alta"
+  ],
+  "leve": [
+    "dor de cabeca", "dor de cabeça", "mal estar", "fraqueza", "enjoo",
+    "cansaco", "cansaço", "dor no corpo", "febre"
+  ]
+}

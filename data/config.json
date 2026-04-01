@@ -1,0 +1,28 @@
+{
+  "nome_unidade": "ESF São Vicente",
+  "telefone": "(55) 99999-9999",
+  "endereco": "Rua Exemplo, 123 - Bairro São Vicente",
+  "horario_funcionamento": "Segunda a sexta, das 07:00 às 17:00",
+
+  "mensagem_boas_vindas": "Olá! Sou o assistente virtual da *ESF São Vicente*. 👋",
+  "mensagem_default": "Não consegui entender sua dúvida. Digite *MENU* para ver as opções disponíveis.",
+  "mensagem_pos_resposta": "Digite *MENU* para voltar ao menu principal, *0* para falar com um ACS ou *SAIR* para encerrar.",
+  "mensagem_encerramento": "Atendimento encerrado. Quando precisar, envie uma nova mensagem. 👋",
+  "mensagem_inatividade_aviso": "Seu atendimento está sem interação há algum tempo. Se ainda precisar de ajuda, responda esta mensagem. Caso contrário, ele será encerrado em breve.",
+  "mensagem_inatividade_encerramento": "Seu atendimento foi encerrado por inatividade. Se precisar de ajuda, basta enviar uma nova mensagem.",
+  "mensagem_nps": "Antes de sair, de *0 a 10*, como você avalia este atendimento?",
+
+  "palavras_encerramento": ["sair", "encerrar", "fim", "tchau", "obrigado", "obrigada"],
+
+  "menu_opcoes": [
+    "1️⃣ - Horário de atendimento",
+    "2️⃣ - Agendamento",
+    "3️⃣ - Receita",
+    "4️⃣ - Vacina",
+    "5️⃣ - Pressão alta e sintomas",
+    "6️⃣ - Exames",
+    "7️⃣ - Documentos",
+    "8️⃣ - Localização",
+    "0️⃣ - Falar com um ACS"
+  ]
+}

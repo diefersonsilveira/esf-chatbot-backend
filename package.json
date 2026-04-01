@@ -1,0 +1,19 @@
+{
+  "name": "chatbot-esf",
+  "version": "2.0.0",
+  "description": "Bot WhatsApp para Estratégia de Saúde da Família",
+  "main": "chatbot.js",
+  "scripts": {
+    "start": "node chatbot.js",
+    "dev": "nodemon chatbot.js"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.7.0",
+    "moment-timezone": "^0.5.46",
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.34.6"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
